@@ -1,0 +1,82 @@
+html {
+  font-family: sans-serif;
+  --bg: #f6f7fb;
+  --inactive: #e0e0e0;
+  --active: #3498db;
+}
+
+body {
+  background-color: var(--bg);
+  color: #aaa;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.steps {
+  display: flex;
+  gap: 100px;
+}
+
+.step {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid var(--inactive);
+  background-color: white;
+  position: relative;
+  transition: border-color 0.3s;
+}
+.step::before, .step::after {
+  content: "";
+  position: absolute;
+  right: 27px;
+  height: 3px;
+  width: 100px;
+  background-color: var(--inactive);
+}
+
+.step::after {
+  background-color: var(--active);
+  right: 127px;
+  width: 0;
+  transition: right 0.3s, width 0.3s;
+}
+
+.step:first-child::before, .step:first-child::after {
+  display: none;
+}
+
+.step.active {
+  border-color: var(--active);
+}
+
+.step.active::after {
+  right: 27px;
+  width: 100px;
+}
+
+.nav button {
+  background-color: var(--active);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav button.disabled {
+  background-color: var(--inactive);
+  cursor: not-allowed;
+}

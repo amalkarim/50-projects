@@ -1,0 +1,6 @@
+html {
+  font-family: sans-serif;
+  --bg: #f6f7fb;
+  --inactive: #e0e0e0;
+  --active: #3498db;
+}

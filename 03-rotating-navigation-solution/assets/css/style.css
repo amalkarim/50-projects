@@ -1,0 +1,98 @@
+html {
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+body {
+  background-color: #333;
+}
+
+.hamburger {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background-color: #ff7979;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 40px;
+  transition: transform 0.7s;
+  left: -100px;
+  top: -100px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hamburger button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+nav {
+  position: fixed;
+  bottom: 50px;
+  left: -150px;
+  transition: left 0.7s;
+  transition-delay: 0.2s;
+}
+
+nav ul {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+nav li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: white;
+  position: relative;
+  left: 0;
+  transition: left 0.7s;
+}
+
+main {
+  background-color: #fafafa;
+  padding: 100px 50px;
+  transition: transform 0.7s;
+  transform-origin: top left;
+}
+
+h2, p, img {
+  margin-bottom: 10px;
+}
+
+.author {
+  font-style: italic;
+}
+
+.rotate-90 {
+  transform: rotate(-90deg);
+}
+
+.rotate-20 {
+  transform: rotate(-20deg);
+}
+
+.open-nav {
+  left: 0;
+}
+.open-nav li:nth-child(2) {
+  left: 20px;
+}
+.open-nav li:nth-child(3) {
+  left: 40px;
+}
+
+@media (min-width: 1024px) {
+  main {
+    padding: 100px 200px;
+  }
+}

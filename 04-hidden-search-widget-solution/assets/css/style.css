@@ -1,0 +1,38 @@
+html {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+body {
+  min-height: 100vh;
+  background-color: cornflowerblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.txt-search {
+  border: none;
+  height: 50px;
+  padding: 0;
+  outline: none;
+  width: 0;
+  transition: width 0.5s, padding 0.5s;
+}
+
+.txt-search.opened {
+  padding: 0 20px;
+  width: 250px;
+}
+
+.search {
+  display: flex;
+}
+.btn {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+}

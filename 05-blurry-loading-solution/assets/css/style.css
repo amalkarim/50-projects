@@ -1,0 +1,26 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg {
+  position: absolute;
+  background-image: url(../images/potong-keramik.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: relative;
+  color: white;
+  font-size: 50px;
+  font-family: sans-serif;
+}
